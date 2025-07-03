@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugiboni Rising Stars School | Enroll Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Bugiboni Rising Stars School Logo">
+                <div class="logo-text">
+                    <h1>BUGIBONI RISING STARS SCHOOL</h1>
+                    <p>Quality Education in Bugiboni</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="enroll.html" class="btn btn-small">Enroll Now</a></li>
+                    
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enroll Your Child</h2>
+                <p>Join Bugiboni Rising Stars School</p>
+            </div>
+
+            <div class="enrollment-process">
+                <h3>Admission Process</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Complete Application</h4>
+                        <p>Fill out the enrollment form below or visit our school offices</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Assessment</h4>
+                        <p>Your child will undergo a simple assessment for proper placement</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Interview</h4>
+                        <p>Meeting with school administration and parents/guardians</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Payment</h4>
+                        <p>Complete registration fee and first term payment</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h4>Orientation</h4>
+                        <p>New student and parent orientation before school begins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enrollment-form-container">
+                <h3>Enrollment Form</h3>
+                <p>Please fill out this form to begin the admission process. We will contact you within 2 business days.</p>
+                
+           <form action="https://formsubmit.co/bugibonirisingstarsschool@gmail.com" method="POST">
+                    <fieldset>
+                        <legend>Student Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="student-name">Full Name</label>
+                            <input type="text" id="student-name" name="student-name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current-school">Current School (if applicable)</label>
+                            <input type="text" id="current-school" name="current-school">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current-class">Current Class (if applicable)</label>
+                            <input type="text" id="current-class" name="current-class">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="applying-for">Applying For</label>
+                            <select id="applying-for" name="applying-for" required>
+                                <option value="">Select Class</option>
+                                <optgroup label="Nursery Section">
+                                    <option value="Baby Class">Baby Class</option>
+                                    <option value="Middle Class">Middle Class</option>
+                                    <option value="Top Class">Top Class</option>
+                                </optgroup>
+                                <optgroup label="Primary Section">
+                                    <option value="Primary One">Primary One (P.1)</option>
+                                    <option value="Primary Two">Primary Two (P.2)</option>
+                                    <option value="Primary Three">Primary Three (P.3)</option>
+                                    <option value="Primary Four">Primary Four (P.4)</option>
+                                    <option value="Primary Five">Primary Five (P.5)</option>
+                                    <option value="Primary Six">Primary Six (P.6)</option>
+                                    <option value="Primary Seven">Primary Seven (P.7)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Parent/Guardian Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="parent-name">Full Name</label>
+                            <input type="text" id="parent-name" name="parent-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="relationship">Relationship to Student</label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="">Select</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Father">Father</option>
+                                <option value="Guardian">Guardian</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parent-email">Email Address</label>
+                            <input type="email" id="parent-email" name="parent-email" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parent-phone">Phone Number</label>
+                                <input type="tel" id="parent-phone" name="parent-phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="alt-phone">Alternative Phone</label>
+                                <input type="tel" id="alt-phone" name="alt-phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Physical Address</label>
+                            <textarea id="address" name="address" required></textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="how-heard">How did you hear about us?</label>
+                            <select id="how-heard" name="how-heard">
+                                <option value="">Select</option>
+                                <option value="Friend/Family">Friend/Family</option>
+                                <option value="Advertisement">Advertisement</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Website">Website</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comments">Any additional comments or questions?</label>
+                            <textarea id="comments" name="comments"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="agree-terms" name="agree-terms" required>
+                            <label for="agree-terms">I agree to the school's terms and conditions</label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="enrollment-docs">
+                <h3>Required Documents</h3>
+                <p>After submitting this form, you will need to provide the following documents to complete enrollment:</p>
+                <ul>
+                    <li>Copy of birth certificate</li>
+                    <li>Passport photos (4 copies)</li>
+                    <li>Previous school report cards (if applicable)</li>
+                    <li>Transfer letter (for students coming from other schools)</li>
+                    <li>Immunization records</li>
+                </ul>
+                <p>You may bring these documents when you come for the assessment or send them via email to admissions@risingstarsbugiboni.com</p>
+            </div>
+        </div>
+    </section>
+ <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Bugiboni Rising Stars School provides quality education based on the Uganda primary curriculum in Bugiboni.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="fees.html">Fees Structure</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Classes</h3>
+                    <ul>
+                        <li><a href="classes.html#nursery">Nursery Section</a></li>
+                        <li><a href="classes.html#primary">Primary Section</a></li>
+                        <li><a href="classes.html#teachers">Our Teachers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bugiboni Road, Bugiboni Town</li>
+                        <li><i class="fas fa-phone-alt"></i> +256 712 345 678</li>
+                        <li><i class="fas fa-envelope"></i> info@risingstarsbugiboni.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bugiboni Rising Stars School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-btns">
+        <a href="https://wa.me/256712345678" class="floating-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+256712345678" class="floating-btn call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will contact you within 2 business days to schedule an assessment.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

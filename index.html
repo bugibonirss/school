@@ -3,689 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WESINA PRINTING AND PUBLISHING CENTRE - Bugiboni</title>
+    <title>Bugiboni Rising Stars School | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0056b3;
-            --secondary-color: #003366;
-            --accent-color: #ffcc00;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-            --black: #000000;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo-text h1 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-        
-        .logo-text p {
-            font-size: 0.8rem;
-            color: var(--text-color);
-        }
-        
-        /* Navigation */
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('printing-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        /* Sections */
-        .section {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-        
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .about-img img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-text h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .mission-vision {
-            margin-top: 30px;
-        }
-        
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            height: 250px;
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 86, 179, 0.8);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-overlay h3 {
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-        
-        /* Pricing Section */
-        .pricing-tables {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .pricing-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .pricing-card.popular {
-            border: 2px solid var(--accent-color);
-            position: relative;
-        }
-        
-        .popular-tag {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--accent-color);
-            color: var(--black);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .pricing-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            color: var(--text-color);
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .pricing-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        .contact-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .contact-details {
-            margin-bottom: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .contact-icon {
-            color: var(--primary-color);
-            margin-right: 15px;
-            font-size: 1.2rem;
-            margin-top: 3px;
-        }
-        
-        .working-hours {
-            background-color: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .working-hours h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .contact-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .contact-form textarea {
-            height: 150px;
-        }
-        
-        /* Testimonials Section */
-        .testimonials-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .testimonial {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        .testimonial-content {
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-        
-        .author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-        
-        /* FAQ Section */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 15px 20px;
-            background-color: var(--light-bg);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 500;
-        }
-        
-        .faq-question:hover {
-            background-color: #e9ecef;
-        }
-        
-        .faq-answer {
-            padding: 20px;
-            background-color: var(--white);
-            display: none;
-        }
-        
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 60px 0 20px;
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-col h3 {
-            color: var(--white);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-        
-        .footer-col ul {
-            list-style: none;
-        }
-        
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-col ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-col ul li a:hover {
-            color: var(--white);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            color: var(--white);
-            background-color: rgba(255, 255, 255, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--primary-color);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-        
-        /* Floating Action Buttons */
-        .floating-btns {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 99;
-        }
-        
-        .floating-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, transform 0.3s;
-            text-decoration: none;
-        }
-        
-        .floating-btn.whatsapp {
-            background-color: #25D366;
-        }
-        
-        .floating-btn.call {
-            background-color: var(--accent-color);
-            color: var(--black);
-        }
-        
-        .floating-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-img {
-                order: -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .logo {
-                margin-bottom: 15px;
-                justify-content: center;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0 10px 10px;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .section {
-                padding: 40px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav {
-                display: none;
-                width: 100%;
-                margin-top: 15px;
-            }
-            
-            nav.active {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 5px 0;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .floating-btns {
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="logo.png" alt="Wesina Printing Logo">
+                <img src="images/logo.png" alt="Bugiboni Rising Stars School Logo">
                 <div class="logo-text">
-                    <h1>WESINA PRINTING</h1>
-                    <p>PRINTING AND PUBLISHING CENTRE</p>
+                    <h1>BUGIBONI RISING STARS SCHOOL</h1>
+                    <p>Quality Education in Bugiboni</p>
                 </div>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -693,461 +24,146 @@
             </button>
             <nav id="mainNav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="fees.html">Fees</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="enroll.html" class="btn btn-small">Enroll Now</a></li>
+                    
+                  
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h2>Quality Printing Services in Bugiboni</h2>
-            <p>We deliver high-quality printing solutions for businesses, events, and personal needs. Fast, reliable, and affordable services tailored to your requirements.</p>
-            <a href="#contact" class="btn">Get a Quote</a>
+            <h2>Nurturing Future Leaders</h2>
+            <p>Providing quality education based on the Uganda primary curriculum in a caring and stimulating environment.</p>
+            <div class="hero-btns">
+                <a href="enroll.html" class="btn">Enroll Now</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="quick-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>10 Classes</h3>
+                    <p>From Nursery to Primary Seven</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Qualified Teachers</h3>
+                    <p>Experienced and dedicated staff</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Uganda Curriculum</h3>
+                    <p>Following national standards</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Bugiboni Location</h3>
+                    <p>Conveniently situated</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="section" id="about">
+    <section class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
+            <div class="section-header">
+                <h2>Welcome to Our School</h2>
+                <p>A brief introduction to Bugiboni Rising Stars School</p>
             </div>
-            <div class="about-content">
+            <div class="about-preview">
                 <div class="about-text">
-                    <h3>Your Trusted Printing Partner</h3>
-                    <p>Wesina Printing and Publishing Centre has been serving the Bugiboni community since 2010, providing top-notch printing services with a personal touch. We take pride in our attention to detail and commitment to customer satisfaction.</p>
-                    
-                    <div class="mission-vision">
-                        <h3>Our Mission</h3>
-                        <p>To deliver exceptional printing services that help our clients communicate their messages effectively while maintaining the highest standards of quality and service.</p>
-                        
-                        <h3>Our Vision</h3>
-                        <p>To be the preferred printing service provider in Bugiboni and surrounding areas, known for our reliability, quality, and customer-focused approach.</p>
-                    </div>
+                    <p>Bugiboni Rising Stars School is committed to providing quality education to children in Bugiboni and surrounding areas. We follow the Uganda primary curriculum and offer classes from Nursery to Primary Seven.</p>
+                    <p>Our school provides a nurturing environment where children can grow academically, socially, and spiritually. We believe every child has unique potential waiting to be discovered.</p>
+                    <a href="about.html" class="btn">Learn More About Us</a>
                 </div>
-                <div class="about-img">
-                    <img src="printing-shop.jpg" alt="Wesina Printing Shop">
+                <div class="about-image">
+                    <img src="images/school-building.jpg" alt="School Building">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section" id="services">
+    <!-- Classes Preview -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
+            <div class="section-header">
+                <h2>Our Classes</h2>
+                <p>Quality education for all levels</p>
             </div>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="business-cards.jpg" alt="Business Cards">
-                    </div>
-                    <div class="service-content">
-                        <h3>Business Cards</h3>
-                        <p>Professional business card printing in various sizes, paper types, and finishes to make your first impression count.</p>
-                    </div>
+            <div class="classes-preview">
+                <div class="class-card">
+                    <img src="images/nursery-class.jpg" alt="Nursery Class">
+                    <h3>Nursery Section</h3>
+                    <p>Baby, Middle and Top classes</p>
+                    <a href="classes.html#nursery" class="btn btn-small">Learn More</a>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="flyers-posters.jpg" alt="Flyers and Posters">
-                    </div>
-                    <div class="service-content">
-                        <h3>Flyers & Posters</h3>
-                        <p>Eye-catching flyers and posters for promotions, events, or announcements in different sizes and paper stocks.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="banners.jpg" alt="Banners">
-                    </div>
-                    <div class="service-content">
-                        <h3>Banners & Signage</h3>
-                        <p>Durable indoor and outdoor banners, pull-up banners, and signage for businesses and events.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="wedding-cards.jpg" alt="Wedding Cards">
-                    </div>
-                    <div class="service-content">
-                        <h3>Wedding & Invitation Cards</h3>
-                        <p>Elegant wedding invitations, birthday cards, and other special occasion stationery with various design options.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="book-printing.jpg" alt="Book Printing">
-                    </div>
-                    <div class="service-content">
-                        <h3>Book Publishing</h3>
-                        <p>Complete book publishing services including printing, binding, and cover design for authors and publishers.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="branded-items.jpg" alt="Branded Items">
-                    </div>
-                    <div class="service-content">
-                        <h3>Branded Items</h3>
-                        <p>Custom branded merchandise like calendars, notebooks, pens, and mugs to promote your business.</p>
-                    </div>
+                <div class="class-card">
+                    <img src="images/primary-class.jpg" alt="Primary Class">
+                    <h3>Primary Section</h3>
+                    <p>P.1 to P.7 classes</p>
+                    <a href="classes.html#primary" class="btn btn-small">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
+    <!-- Testimonials Preview -->
+    <section class="section">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
+            <div class="section-header">
+                <h2>What Parents Say</h2>
+                <p>Feedback from our school community</p>
             </div>
-            <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item">
-                    <img src="portfolio1.jpg" alt="Portfolio Item 1">
-                    <div class="portfolio-overlay">
-                        <h3>Business Cards</h3>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item">
-                    <img src="portfolio2.jpg" alt="Portfolio Item 2">
-                    <div class="portfolio-overlay">
-                        <h3>Event Flyer</h3>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item">
-                    <img src="portfolio3.jpg" alt="Portfolio Item 3">
-                    <div class="portfolio-overlay">
-                        <h3>Wedding Invitation</h3>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 4 -->
-                <div class="portfolio-item">
-                    <img src="portfolio4.jpg" alt="Portfolio Item 4">
-                    <div class="portfolio-overlay">
-                        <h3>Company Brochure</h3>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 5 -->
-                <div class="portfolio-item">
-                    <img src="portfolio5.jpg" alt="Portfolio Item 5">
-                    <div class="portfolio-overlay">
-                        <h3>Roll-Up Banner</h3>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 6 -->
-                <div class="portfolio-item">
-                    <img src="portfolio6.jpg" alt="Portfolio Item 6">
-                    <div class="portfolio-overlay">
-                        <h3>Book Cover</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pricing & Quotes</h2>
-            </div>
-            <div class="pricing-tables">
-                <!-- Pricing Card 1 -->
-                <div class="pricing-card">
-                    <h3>Basic Printing</h3>
-                    <div class="price">UGX 50,000<span>/100 pcs</span></div>
-                    <ul class="pricing-features">
-                        <li>Black & White Printing</li>
-                        <li>Standard Paper (80gsm)</li>
-                        <li>Up to A4 Size</li>
-                        <li>1 Business Day Turnaround</li>
-                    </ul>
-                    <a href="#contact" class="btn">Order Now</a>
-                </div>
-                
-                <!-- Pricing Card 2 -->
-                <div class="pricing-card popular">
-                    <div class="popular-tag">Most Popular</div>
-                    <h3>Color Printing</h3>
-                    <div class="price">UGX 120,000<span>/100 pcs</span></div>
-                    <ul class="pricing-features">
-                        <li>Full Color Printing</li>
-                        <li>Premium Paper (120gsm)</li>
-                        <li>Up to A3 Size</li>
-                        <li>Glossy/Matt Finish</li>
-                        <li>2 Business Days Turnaround</li>
-                    </ul>
-                    <a href="#contact" class="btn">Order Now</a>
-                </div>
-                
-                <!-- Pricing Card 3 -->
-                <div class="pricing-card">
-                    <h3>Premium Printing</h3>
-                    <div class="price">UGX 250,000<span>/100 pcs</span></div>
-                    <ul class="pricing-features">
-                        <li>High-Quality Color Printing</li>
-                        <li>Art Paper/Card Stock</li>
-                        <li>Custom Sizes Available</li>
-                        <li>Special Finishes (Spot UV, Foil)</li>
-                        <li>3-5 Business Days Turnaround</li>
-                    </ul>
-                    <a href="#contact" class="btn">Order Now</a>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <p>Don't see what you need? Contact us for custom quotes on large orders or specialized printing services.</p>
-                <a href="#contact" class="btn">Request Custom Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
-            </div>
-            <div class="testimonials-container">
-                <!-- Testimonial 1 -->
-                <div class="testimonial">
+            <div class="testimonials-preview">
+                <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Wesina Printing delivered exceptional quality business cards for my company. The colors were vibrant, and the card stock was premium quality. They completed the order faster than promised. Highly recommended!"</p>
+                        <p>"My child has improved tremendously since joining Bugiboni Rising Stars. The teachers are caring and attentive."</p>
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="client1.jpg" alt="Client 1">
-                        </div>
-                        <div class="author-info">
-                            <h4>Robert Kato</h4>
-                            <p>Kato Enterprises</p>
-                        </div>
+                        <h4>Mr. Kato</h4>
+                        <p>Parent of P.3 Student</p>
                     </div>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial">
+                <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"I needed 500 flyers for a church event on short notice. Wesina not only met the tight deadline but also provided valuable design suggestions that made our flyers stand out. The service was professional and the prices reasonable."</p>
+                        <p>"The school provides a safe and stimulating environment for learning. I highly recommend it."</p>
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="client2.jpg" alt="Client 2">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Nalwoga</h4>
-                            <p>Bugiboni Community Church</p>
-                        </div>
+                        <h4>Mrs. Nalwoga</h4>
+                        <p>Parent of Top Class Student</p>
                     </div>
                 </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"As a small business owner, I appreciate the personal attention I receive at Wesina Printing. They remember my preferences and always deliver consistent quality. Their wedding invitation samples helped me choose the perfect design for my daughter's wedding."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="client3.jpg" alt="Client 3">
-                        </div>
-                        <div class="author-info">
-                            <h4>James Ssebaggala</h4>
-                            <p>Ssebaggala Hardware</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="text-center">
+                <a href="testimonials.html" class="btn">Read More Testimonials</a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section" id="faq">
+    <!-- Call to Action -->
+    <section class="cta">
         <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-container">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What file formats do you accept for printing?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We accept PDF (preferred), JPEG, PNG, and TIFF files. For best results, please ensure your files are high-resolution (300dpi) and include bleed marks if your design extends to the edge of the page.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does printing usually take?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Standard printing jobs take 1-2 business days. Larger or more complex orders (like book publishing or special finishes) may take 3-5 business days. We offer rush services for an additional fee if you need your order completed sooner.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you offer design services?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we have in-house designers who can create custom designs for your printing needs. Design fees vary depending on the complexity of the project. We're happy to provide a free consultation to discuss your requirements.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What payment methods do you accept?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We accept cash, mobile money (MTN, Airtel), and bank transfers. Payment is required before we begin printing, except for established corporate clients with credit arrangements.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ Item 5 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you offer delivery services?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we can arrange delivery within Bugiboni and surrounding areas for a small fee. For large orders, delivery may be free. You're also welcome to pick up your order from our shop.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Bugiboni Road, Plot 45<br>Bugiboni Town</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+256 712 345 678<br>+256 789 012 345</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@wesinaprinting.com<br>orders@wesinaprinting.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="working-hours">
-                        <h4>Working Hours</h4>
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
-                        Saturday: 9:00 AM - 4:00 PM<br>
-                        Sunday: Closed</p>
-                    </div>
-                    
-                    <div class="social-links" style="margin-top: 20px;">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="quoteForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="Business Cards">Business Cards</option>
-                                <option value="Flyers & Posters">Flyers & Posters</option>
-                                <option value="Banners & Signage">Banners & Signage</option>
-                                <option value="Wedding Cards">Wedding Cards</option>
-                                <option value="Book Publishing">Book Publishing</option>
-                                <option value="Branded Items">Branded Items</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+            <h2>Ready to Join Our School?</h2>
+            <p>Enroll your child today and give them the gift of quality education</p>
+            <div class="cta-btns">
+                <a href="enroll.html" class="btn">Enroll Now</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </section>
@@ -1155,48 +171,46 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-container">
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>WESINA PRINTING</h3>
-                    <p>Your trusted printing partner in Bugiboni, delivering quality printing services with a personal touch since 2010.</p>
+                    <h3>About Us</h3>
+                    <p>Bugiboni Rising Stars School provides quality education based on the Uganda primary curriculum in Bugiboni.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="fees.html">Fees Structure</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Services</h3>
+                    <h3>Classes</h3>
                     <ul>
-                        <li><a href="#">Business Cards</a></li>
-                        <li><a href="#">Flyers & Posters</a></li>
-                        <li><a href="#">Banners</a></li>
-                        <li><a href="#">Wedding Cards</a></li>
-                        <li><a href="#">Book Publishing</a></li>
-                        <li><a href="#">Branded Items</a></li>
+                        <li><a href="classes.html#nursery">Nursery Section</a></li>
+                        <li><a href="classes.html#primary">Primary Section</a></li>
+                        <li><a href="classes.html#teachers">Our Teachers</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Bugiboni Road, Plot 45</li>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Bugiboni Road, Bugiboni Town</li>
                         <li><i class="fas fa-phone-alt"></i> +256 712 345 678</li>
-                        <li><i class="fas fa-envelope"></i> info@wesinaprinting.com</li>
+                        <li><i class="fas fa-envelope"></i> info@risingstarsbugiboni.com</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 WESINA PRINTING AND PUBLISHING CENTRE. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bugiboni Rising Stars School. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -1211,50 +225,6 @@
         </a>
     </div>
 
-    <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
-        
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-                
-                // Close other open FAQs
-                faqQuestions.forEach(q => {
-                    if (q !== question && q.parentElement.classList.contains('active')) {
-                        q.parentElement.classList.remove('active');
-                    }
-                });
-            });
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (window.innerWidth <= 576) {
-                    document.getElementById('mainNav').classList.remove('active');
-                }
-            });
-        });
-        
-        // Form submission
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you shortly.');
-            this.reset();
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
